@@ -16,7 +16,7 @@ const AIAssistant = () => {
         <div className="bg-gray-800 p-8 rounded-lg shadow-lg">
           <h3 className="text-2xl font-bold mb-4 text-white">Personal AI Assistant</h3>
           <p className="text-lg mb-4 text-gray-300">
-            I'm currently developing a cutting-edge personal AI assistant using state-of-the-art technologies:
+            I&apos;m currently developing a cutting-edge personal AI assistant using state-of-the-art technologies:
           </p>
           <ul className="list-disc list-inside mb-6 text-gray-300">
             <li>LLaMA2 for advanced natural language processing</li>

@@ -23,13 +23,13 @@ const About = () => {
             className="space-y-4"
           >
             <p className="text-lg text-gray-300">
-              I'm a passionate UI/UX designer, web developer, and ethical hacker with a keen eye for creating intuitive and visually stunning digital experiences.
+            I&apos;m a passionate UI/UX designer, web developer, and ethical hacker with a keen eye for creating intuitive and visually stunning digital experiences.
             </p>
             <p className="text-lg text-gray-300">
-              My expertise spans across modern web technologies like React and Next.js, as well as backend development with Python. I'm also proficient in Linux (Parrot OS) and ethical hacking tools like Metasploit.
+            My expertise spans across modern web technologies like React and Next.js, as well as backend development with Python. I&apos;m also proficient in Linux (Parrot OS) and ethical hacking tools like Metasploit.
             </p>
             <p className="text-lg text-gray-300">
-              I believe in the power of technology to solve real-world problems and am constantly pushing the boundaries of what's possible in the digital realm.
+            I believe in the power of technology to solve real-world problems and am constantly pushing the boundaries of what&apos;s possible in the digital realm.
             </p>
           </motion.div>
 
