@@ -39,7 +39,7 @@ const Hero = () => {
           transition={{ duration: 0.5 }}
           className="text-5xl md:text-7xl font-bold mb-4 text-transparent bg-clip-text bg-gradient-to-r from-blue-400 to-purple-600"
         >
-          Your Name
+          D∆RC
         </motion.h1>
         <motion.p
           initial={{ y: 50 }}

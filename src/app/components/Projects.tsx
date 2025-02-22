@@ -5,15 +5,15 @@ import Image from 'next/image'
 const projects = [
   {
     title: 'Scienops',
-    description: 'Developed a cutting-edge scientific operations platform.',
+    description: 'Developed a Cutting-Edge Scientific Operations Platform.',
     image: '/images/scienops.jpg',
     tech: ['React', 'Node.js', 'MongoDB']
   },
   {
     title: 'Evince',
-    description: 'Created an innovative document viewer and annotation tool.',
-    image: '/images/evince.jpg',
-    tech: ['Python', 'Qt', 'PDF.js']
+    description: 'Developed a Pharmaceutical Driven Platform focused on the Implementation of AI in Drug Discovery',
+    image: '/images/evince_dev.png',
+    tech: ['HTML', 'Python', 'PDF.js']
   },
   {
     title: 'Google Sites Enhancement',
@@ -25,7 +25,7 @@ const projects = [
     title: 'Excalidraw Diagrams',
     description: 'Designed and implemented custom diagram components.',
     image: '/images/excalidraw.jpg',
-    tech: ['React', 'SVG', 'Canvas API']
+    tech: ['React', 'SVG', 'Canvas API', 'Excalidraw']
   }
 ]
 

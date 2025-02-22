@@ -9,10 +9,10 @@ const spaceGrotesk = Space_Grotesk({
 })
 
 export const metadata: Metadata = {
-  title: 'Your Name - Portfolio',
+  title: "D∆RC - Portfolio",
   description: 'UI/UX Designer, Web Developer, and Ethical Hacker',
   openGraph: {
-    title: 'Your Name - Portfolio',
+    title: "D∆RC - Portfolio",
     description: 'UI/UX Designer, Web Developer, and Ethical Hacker',
     url: 'https://your-website.com',
     images: [
@@ -20,10 +20,10 @@ export const metadata: Metadata = {
         url: 'https://your-website.com/og-image.jpg',
         width: 1200,
         height: 630,
-        alt: 'Your Name - Portfolio',
+        alt: "D∆RC - Portfolio",
       },
     ],
-    site_name: 'Your Name - Portfolio',
+    siteName: "D∆RC - Portfolio",
   },
   twitter: {
     card: 'summary_large_image',
