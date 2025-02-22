@@ -2,9 +2,10 @@
 import { useRef, useEffect } from 'react'
 import { Canvas, useFrame } from '@react-three/fiber'
 import { Sphere, MeshDistortMaterial } from '@react-three/drei'
+import { Mesh } from 'three'
 
 function AnimatedSphere() {
-  const meshRef = useRef()
+  const meshRef = useRef<Mesh>(null)
 
   useFrame((state) => {
     const time = state.clock.getElapsedTime()
@@ -17,9 +18,9 @@ function AnimatedSphere() {
   return (
     <Sphere args={[1, 100, 200]} scale={2}>
       <MeshDistortMaterial
-        color="#4b0082"
+        color="#530EBB"
         attach="material"
-        distort={0.6}
+        distort={0.5}
         speed={2}
         roughness={0.2}
         metalness={0.2}
