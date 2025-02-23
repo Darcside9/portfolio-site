@@ -1,6 +1,7 @@
 import type { Metadata } from 'next'
 import { Space_Grotesk } from 'next/font/google'
 import './globals.css'
+import { Analytics } from "@vercel/analytics/react"
 
 // Font import using next/font for performance optimization
 const spaceGrotesk = Space_Grotesk({
@@ -50,6 +51,7 @@ export default function RootLayout({
         {/* Global wrapper for your content */}
         <div className="min-h-screen flex flex-col">
           {children}
+          <Analytics/>
         </div>
       </body>
     </html>
