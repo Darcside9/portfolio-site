@@ -16,9 +16,6 @@ body {
   padding: 0;
 }
 
-.hero-section {
-  overflow: hidden;
-}
 /* Custom Scrollbar */
 ::-webkit-scrollbar {
   width: 10px;

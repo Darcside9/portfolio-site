@@ -6,7 +6,7 @@ const projects = [
   {
     title: 'Scienops',
     description: 'Developed a Cutting-Edge Scientific Operations Platform.',
-    image: '/images/scienops.jpg',
+    image: '/images/scienops.png',
     tech: ['React', 'Node.js', 'MongoDB']
   },
   {
@@ -18,13 +18,13 @@ const projects = [
   {
     title: 'Google Sites Enhancement',
     description: 'Contributed to improving Google Sites functionality.',
-    image: '/images/google-sites.jpg',
+    image: '/images/google-sites.png',
     tech: ['JavaScript', 'Google Apps Script']
   },
   {
     title: 'Excalidraw Diagrams',
     description: 'Designed and implemented custom diagram components.',
-    image: '/images/excalidraw.jpg',
+    image: '/images/excalidraw.png',
     tech: ['React', 'SVG', 'Canvas API', 'Excalidraw']
   }
 ]
@@ -43,13 +43,17 @@ const Projects = () => {
               transition={{ duration: 0.5, delay: index * 0.1 }}
               className="bg-gray-900 rounded-lg overflow-hidden shadow-lg hover:shadow-2xl transition-shadow duration-300 transform hover:scale-105"
             >
+            <div className="relative w-full h-48 object-cover">
               <Image
                 src={project.image || '/placeholder.svg'}
                 alt={project.title}
-                width={400}
-                height={250}
-                className="w-full h-48 object-cover"
+                fill
+                // width={400}
+                // height={250}
+                className='object-cover'
+                sizes='(max-width: 768px) 100vw, (max-windth: 1200px) 50vw, 33vw'
               />
+            </div>
               <div className="p-6">
                 <h3 className="text-xl font-bold mb-2 text-white">{project.title}</h3>
                 <p className="text-gray-400 mb-4">{project.description}</p>

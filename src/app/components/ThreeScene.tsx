@@ -16,14 +16,14 @@ function AnimatedSphere() {
   })
 
   return (
-    <Sphere args={[1, 100, 200]} scale={2}>
+    <Sphere args={[2, 100, 200]} scale={1}>
       <MeshDistortMaterial
         color="#530EBB"
         attach="material"
-        distort={0.5}
-        speed={2}
-        roughness={0.2}
-        metalness={0.2}
+        distort={.7}
+        speed={1}
+        roughness={5}
+        metalness={.5}
         bumpScale={20}
       />
     </Sphere>
@@ -49,10 +49,10 @@ export default function ThreeScene() {
   }, [])
 
   return (
-    <div className="absolute top-0 left-0 w-full h-full -z-10">
+    <div className="relative top-0 left-0 w-full h-full -z-10 blur-sm">
       <Canvas>
-        <ambientLight intensity={0.5} />
-        <directionalLight position={[10, 10, 5]} intensity={1} />
+        <ambientLight intensity={.6} />
+        <directionalLight position={[5, 200, 50]} intensity={1.5} />
         <AnimatedSphere />
       </Canvas>
     </div>
