@@ -20,7 +20,7 @@ const Hero = () => {
   const fullText = "UI/UX Designer | Web Developer | Ethical Hacker";
   const typingSpeed = 100;
 
-  useState(() => {
+  useEffect(() => {
     let i = 0;
     const typingEffect = setInterval(() => {
       if (i < fullText.length) {
