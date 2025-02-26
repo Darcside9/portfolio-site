@@ -1,6 +1,7 @@
 'use client'
 import { motion } from 'framer-motion'
 import Image from 'next/image'
+import { title } from 'process'
 
 const projects = [
   {
@@ -26,6 +27,12 @@ const projects = [
     description: 'Designed and implemented custom diagram components.',
     image: '/images/excalidraw.png',
     tech: ['React', 'SVG', 'Canvas API', 'Excalidraw']
+  },
+  {
+    title: "Portfolio-Website",
+    description: 'A sleek portfolio built with Next.js, Tailwind CSS, and Framer Motion, showcasing my projects, skills, and an interactive AI Assistant.',
+    image: '/images/portfolio.png',
+    tech: ['JavaScript', 'React', 'Next.js']
   }
 ]
 
