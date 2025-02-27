@@ -1,7 +1,7 @@
 "use client";
 
-import { motion, AnimatePresence, px } from "framer-motion";
-import { useState, useEffect, useRef } from "react";
+import { motion, AnimatePresence } from "framer-motion";
+import { useState, useEffect, useRef, useCallback } from "react";
 import ThreeScene from "./ThreeScene";
 import {
   FaGithub,
@@ -13,7 +13,7 @@ import {
   FaLinkedin,
   FaTelegramPlane,
   FaWhatsapp,
-  FaDiscord
+  FaDiscord,
 } from "react-icons/fa";
 import {
   SiFigma,
@@ -22,7 +22,7 @@ import {
 const Hero = () => {
   const [text, setText] = useState("");
   const [isExpanded, setIsExpanded] = useState(false);
-  const containerRef = useRef(null);
+  const containerRef = useRef<HTMLDivElement | null>(null);
   const fullText = "UI/UX Designer | Web Developer | Ethical Hacker";
   const typingSpeed = 50;
 
@@ -88,16 +88,16 @@ const Hero = () => {
   
 
   const handleToggle = () => setIsExpanded((prev) => !prev);
+  // const containerRef = useRef<HTMLDivElement | null>(null);
 
-  const handleClickOutside = (e) => {
+  const handleClickOutside = useCallback((e: MouseEvent) => {
     if (
       isExpanded &&
-      containerRef.current &&
-      !containerRef.current.contains(e.target)
-    ) {
+      containerRef.current?.contains(e.target as Node)
+    ) return; {
       setIsExpanded(false);
     }
-  };
+  }, [isExpanded]);
 
   useEffect(() => {
     const isMobile = window.innerWidth <= 768;
@@ -105,10 +105,11 @@ const Hero = () => {
       document.addEventListener("click", handleClickOutside);
     }
     return () => document.removeEventListener("click", handleClickOutside);
-  }, [isExpanded]);
+  }, [handleClickOutside]);
 
   return (
-    <motion.section
+    <motion.section 
+      ref={containerRef}
       initial={{ opacity: 0 }}
       animate={{ opacity: 1 }}
       transition={{ duration: 1 }}
