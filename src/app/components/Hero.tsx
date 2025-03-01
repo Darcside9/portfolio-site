@@ -163,6 +163,53 @@ const Hero = () => {
             <FaFacebook size={24} />
           </motion.a>
 
+          {/* <AnimatePresence>
+            <motion.div
+              ref={containerRef}
+              initial={{ width: 140, height: 45 }}
+              animate={{
+                width: isExpanded ? (window.innerWidth <= 768 ? 170 : 400) : 140,
+                height: isExpanded ? (window.innerHeight <= 768 ? 400 : 55) : 45,
+                minHeight: isExpanded ? (window.innerWidth <= 768 ? "auto" : 65 ) : 45,
+                transition: { duration: 0.3 },
+              }}
+              onMouseEnter={() => {
+                if (window.innerWidth > 768) setIsExpanded(true);
+              }}
+              onMouseLeave={() => {
+                if (window.innerWidth > 768) setIsExpanded(false);
+              }}
+              onClick={handleToggle}
+              className="bg-gray-500 hover:bg-gray-300/30 text-white font-bold rounded-2xl flex items-center justify-center overflow-hidden relative transsition-all duration-300 cursor-pointer"
+            >
+              {!isExpanded && <span>Get in Touch</span>}
+              {isExpanded && (
+                <motion.div
+                  className="flex flex-row md:grid-cols-3 gap-4 p-2"
+                  initial={{ opacity: 0 }}
+                  animate={{ opacity: 1 }}
+                  exit={{ opacity: 0 }}
+                  transition={{ duration: 0.3 }}
+                >
+                  {socialLinks.map((link, index) => (
+                    <motion.a
+                      key={index}
+                      href={link.href}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      whileHover={link.whileHover}
+                      whileTap={{ scale: 0.95 }}
+                      className={link.className}
+                    >
+                      <link.icon size={24} />
+                    </motion.a>
+                  ))}
+                </motion.div>
+              )}
+            </motion.div>
+          </AnimatePresence> */}
+
+            
           <AnimatePresence>
             <motion.div
               ref={containerRef}
