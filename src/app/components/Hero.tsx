@@ -3,6 +3,7 @@
 import { motion, AnimatePresence } from "framer-motion";
 import { useState, useEffect, useRef, useCallback } from "react";
 import ThreeScene from "./ThreeScene";
+import Link from 'next/link';
 import {
   FaGithub,
   FaSlack,
@@ -88,13 +89,9 @@ const Hero = () => {
   
 
   const handleToggle = () => setIsExpanded((prev) => !prev);
-  // const containerRef = useRef<HTMLDivElement | null>(null);
 
   const handleClickOutside = useCallback((e: MouseEvent) => {
-    if (
-      isExpanded &&
-      containerRef.current?.contains(e.target as Node)
-    ) return; {
+    if (isExpanded && containerRef.current && !containerRef.current.contains(e.target as Node)) {
       setIsExpanded(false);
     }
   }, [isExpanded]);
@@ -140,8 +137,7 @@ const Hero = () => {
 
         {/* Dynamic Island Section */}
         <div className="flex items-center justify-center gap-4">
-
-        <motion.a
+          <motion.a
             href="https://github.com/Darcside9"
             target="_blank"
             rel="noopener noreferrer"
@@ -150,7 +146,7 @@ const Hero = () => {
             className="bg-gray-800 hover:bg-gray-700 text-white p-3 rounded-full transition-colors duration-300"
           >
             <FaGithub size={24} />
-        </motion.a>
+          </motion.a>
 
           <motion.a
             href="https://www.facebook.com/profile.php?id=100090027917721"
@@ -163,61 +159,13 @@ const Hero = () => {
             <FaFacebook size={24} />
           </motion.a>
 
-          {/* <AnimatePresence>
-            <motion.div
-              ref={containerRef}
-              initial={{ width: 140, height: 45 }}
-              animate={{
-                width: isExpanded ? (window.innerWidth <= 768 ? 170 : 400) : 140,
-                height: isExpanded ? (window.innerHeight <= 768 ? 400 : 55) : 45,
-                minHeight: isExpanded ? (window.innerWidth <= 768 ? "auto" : 65 ) : 45,
-                transition: { duration: 0.3 },
-              }}
-              onMouseEnter={() => {
-                if (window.innerWidth > 768) setIsExpanded(true);
-              }}
-              onMouseLeave={() => {
-                if (window.innerWidth > 768) setIsExpanded(false);
-              }}
-              onClick={handleToggle}
-              className="bg-gray-500 hover:bg-gray-300/30 text-white font-bold rounded-2xl flex items-center justify-center overflow-hidden relative transsition-all duration-300 cursor-pointer"
-            >
-              {!isExpanded && <span>Get in Touch</span>}
-              {isExpanded && (
-                <motion.div
-                  className="flex flex-row md:grid-cols-3 gap-4 p-2"
-                  initial={{ opacity: 0 }}
-                  animate={{ opacity: 1 }}
-                  exit={{ opacity: 0 }}
-                  transition={{ duration: 0.3 }}
-                >
-                  {socialLinks.map((link, index) => (
-                    <motion.a
-                      key={index}
-                      href={link.href}
-                      target="_blank"
-                      rel="noopener noreferrer"
-                      whileHover={link.whileHover}
-                      whileTap={{ scale: 0.95 }}
-                      className={link.className}
-                    >
-                      <link.icon size={24} />
-                    </motion.a>
-                  ))}
-                </motion.div>
-              )}
-            </motion.div>
-          </AnimatePresence> */}
-
-            
           <AnimatePresence>
             <motion.div
               ref={containerRef}
               initial={{ width: 140, height: 45 }}
               animate={{
                 width: isExpanded ? (window.innerWidth <= 768 ? 170 : 400) : 140,
-                height: isExpanded ? (window.innerHeight <= 768 ? 400 : 55) : 45,
-                minHeight: isExpanded ? (window.innerWidth <= 768 ? "auto" : 65 ) : 45,
+                height: isExpanded ? (window.innerHeight <= 768 ? 55 : 55) : 45,
                 transition: { duration: 0.3 },
               }}
               onMouseEnter={() => {
@@ -227,7 +175,7 @@ const Hero = () => {
                 if (window.innerWidth > 768) setIsExpanded(false);
               }}
               onClick={handleToggle}
-              className="bg-gray-500 hover:bg-gray-300/30 text-white font-bold rounded-2xl flex items-center justify-center overflow-hidden relative transsition-all duration-300 cursor-pointer"
+              className="bg-gray-500 hover:bg-gray-300/30 text-white font-bold rounded-2xl flex items-center justify-center overflow-hidden relative duration-200 cursor-pointer"
             >
               {!isExpanded && <span>Get in Touch</span>}
               {isExpanded && (
@@ -277,6 +225,22 @@ const Hero = () => {
           >
             <FaTiktok size={24} />
           </motion.a>
+        </div>
+
+        <div>
+          <motion.div
+          >
+            <Link href="/resume"
+              style={{
+                position: "relative",
+                top: "40px",
+                fontSize: '18px',
+              }}
+              className="bg-gray-700 hover:bg-gray-300/30 text-white px-10 py-4 mt-4 font-bold rounded-xl transition-all duration-200 cursor-pointer"
+            >
+              Get Resume
+            </Link>
+          </motion.div>
         </div>
       </div>
     </motion.section>
