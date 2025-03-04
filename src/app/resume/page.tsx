@@ -6,7 +6,7 @@ import { Download } from "lucide-react";
 import Image from "next/image";
 import dynamic from "next/dynamic";
 
-const Resume = dynamic(() => import("@/app/resume/page"), { ssr: false });
+const Resume = dynamic(() => import("./page"), { ssr: false });
 
 const ResumePage = () => {
   const resumeRef = useRef(null);
