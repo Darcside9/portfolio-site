@@ -3,9 +3,8 @@
   "version": "0.1.0",
   "private": true,
   "scripts": {
-    "postinstall": "npm install",
     "dev": "next dev --turbopack",
-    "build": "pnpm install --legacy-peer-deps && next build",
+    "build": "pnpm install && next build",
     "start": "next start",
     "lint": "next lint"
   },
