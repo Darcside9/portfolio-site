@@ -103,3 +103,10 @@ html {
     @apply bg-background text-foreground;
   }
 }
+
+@media print {
+  .break-before-page{
+    page-break-before: always;
+    margin-top: 40px;
+  }
+}

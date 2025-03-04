@@ -49,9 +49,9 @@ export default function ThreeScene() {
   }, [])
 
   return (
-    <div className="relative top-0 left-0 w-full h-full -z-10 blur-sm">
+    <div className="relative left-0 w-full h-full">
       <Canvas>
-        <ambientLight intensity={.6} />
+        <ambientLight intensity={1} />
         <directionalLight position={[5, 200, 50]} intensity={1.5} />
         <AnimatedSphere />
       </Canvas>
