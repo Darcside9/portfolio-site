@@ -42,13 +42,13 @@ const Hero = () => {
   const socialLinks = [
     {
       icon: FaLinkedin,
-      href: "https://linkedin.com/in/yourusername",
+      href: "https://linkedin.com/in/omotoyosi-fujah",
       className: "bg-blue-700 hover:bg-blue-500 text-white p-2 rounded-full",
       whileHover: { scale: 1.1, rotate: 10, boxShadow: '0px 0px 40px rgba(20, 93, 221, 0.82)' },
     },
     {
       icon: FaTwitter,
-      href: "https://twitter.com/darc_999",
+      href: "https://twitter.com/Darc_999",
       className: "bg-sky-500 hover:bg-sky-400 text-white p-2 rounded-full",
       whileHover: { scale: 1.1, rotate: 10, boxShadow: '0px 0px 40px rgba(27, 175, 222, 0.82)' },
     },
@@ -72,7 +72,7 @@ const Hero = () => {
     },
     {
       icon: FaTelegramPlane,
-      href: "https://t.me/Darcside/9",
+      href: "https://t.me/Darcside9",
       className: "bg-sky-600 hover:bg-sky-500 text-white p-2 rounded-full",
       whileHover: { scale: 1.1, rotate: 10, boxShadow: '0px 0px 40px rgba(32, 186, 230, 0.8)' },
     },
@@ -119,7 +119,7 @@ const Hero = () => {
           transition={{ duration: 0.5 }}
           className="text-[60px] md:text-6x1 font-bold mb-4 text-transparent bg-clip-text bg-gradient-to-r from-blue-400 to-purple-600 font-poppins"
         >
-          OMOTOYOSI JAMIU FUJAH
+          Omotoyosi Jamiu Fujah
         </motion.h1>
         <motion.p
           initial={{ y: 50 }}

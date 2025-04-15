@@ -42,7 +42,7 @@ const ResumePage = () => {
           <CardContent>
             <div className="flex flex-col md:flex-row items-center gap-6">
               <Image
-                src="/images/profile.png"
+                src="/images/profile.jpg"
                 alt="Profile"
                 width={150}
                 height={150}
