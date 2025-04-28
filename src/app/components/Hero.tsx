@@ -212,7 +212,7 @@ const Hero = () => {
           </motion.a>
 
           <motion.a
-            href="https://www.tiktok.com/@coder__22?is_from_webapp=1&sender_device=pc"
+            href="https://www.tiktok.com/@_darc9"
             target="_blank"
             rel="noopener noreferrer"
             whileHover={{ scale: 1.1, rotate: 10, boxShadow: '0px 0px 40px rgba(225, 29, 22, 0.82)' }}
