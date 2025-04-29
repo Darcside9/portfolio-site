@@ -63,7 +63,7 @@ const ResumePage = () => {
               <h2 className="text-xl font-semibold text-gray-800">Experience</h2>
               <ul className="mt-4 space-y-4">
                 <li>
-                  <h3 className="text-lg font-bold">Content Developer - Scienops</h3>
+                  <h3 className="text-lg font-bold">Web Developer - Scienops</h3>
                   <p className="text-gray-600 text-sm">May 2024 - June 2024</p>
                   <ul className="list-disc list-inside text-gray-500 text-sm mt-2 space-y-1">
                     <li>Developed comprehensive content for ScienOps' website, enhancing its focus on Artificial Intelligence (AI) applications in drug discovery and biomedical research.</li>
