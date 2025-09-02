@@ -22,7 +22,7 @@ const Hero = () => {
   const [text, setText] = useState("");
   const [isExpanded, setIsExpanded] = useState(false);
   const containerRef = useRef<HTMLDivElement | null>(null);
-  const fullText = "U[I/X] Designer & Web Developer";
+  const fullText = ("UI" + "/" + "UX" + "Designer" + "& Web Developer");
   const typingSpeed = 40;
 
   useEffect(() => {
